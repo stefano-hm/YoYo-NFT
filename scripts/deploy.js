@@ -4,7 +4,7 @@ async function main() {
   const YoYoNFT = await hre.ethers.getContractFactory("YoYoNFT");
   const yoyo = await YoYoNFT.deploy();
 
-  await yoyo.deployed(); 
+  await yoyo.deployed();
 
   console.log("✅ YoYoNFT deployed to:", yoyo.address);
 }
@@ -15,4 +15,3 @@ main()
     console.error(error);
     process.exit(1);
   });
-
