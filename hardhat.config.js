@@ -7,19 +7,23 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 module.exports = {
   solidity: {
-    version: "0.8.24",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
+    compilers: [
+      {
+        version: "0.8.19",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
-    },
+    ],
   },
   networks: {
     hardhat: {},
     sepolia: {
-      url: SEPOLIA_URL,
-      accounts: [PRIVATE_KEY],
+      url: SEPOLIA_URL || "",
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY.trim()] : [],
     },
   },
   etherscan: {
