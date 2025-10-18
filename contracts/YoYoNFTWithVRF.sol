@@ -42,7 +42,7 @@ contract YoYoNFTWithVRF is ERC721URIStorage, VRFConsumerBaseV2Plus {
     keyHash = keyHash_;
     subscriptionId = subscriptionId_;
     requestConfirmations = 3;
-    callbackGasLimit = 200000;
+    callbackGasLimit = 100000;
   }
 
   function requestRandomNFT(address to) external payable returns (uint256) {
