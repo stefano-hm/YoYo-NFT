@@ -10,7 +10,7 @@ async function main() {
 
   const VRF_COORDINATOR = process.env.VRF_COORDINATOR_SEPOLIA;
   const KEY_HASH = process.env.KEY_HASH_SEPOLIA;
-  
+
   const SUBSCRIPTION_ID = hre.ethers.BigNumber.from(process.env.SUBSCRIPTION_ID_SEPOLIA);
 
   const MINT_FEE = hre.ethers.utils.parseEther("0.01");

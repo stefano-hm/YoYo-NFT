@@ -8,7 +8,7 @@ async function main() {
 
   console.log("Minting from:", user.address);
   const tx = await nft.requestRandomNFT(user.address, {
-    value: hre.ethers.utils.parseEther("0.01"), 
+    value: hre.ethers.utils.parseEther("0.01"),
   });
 
   const receipt = await tx.wait();
